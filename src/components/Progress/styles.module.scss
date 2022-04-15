@@ -1,0 +1,26 @@
+.texts {
+  padding-bottom: 0.4rem;
+  align-items: flex-end;
+
+  .title {
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+  }
+
+  .level {
+    color: var(--dark);
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    font-style: italic;
+  }
+}
+
+.progress {
+  background-color: var(--middle);
+  height: 0.3rem;
+
+  div {
+    background-color: var(--color-primary);
+    height: 100%;
+  }
+}

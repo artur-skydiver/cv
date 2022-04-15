@@ -1,0 +1,35 @@
+@import 'src/styles/variables';
+
+.root {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: $extra-width;
+  box-sizing: content-box;
+  background-color: var(--light);
+}
+
+.content {
+  padding: 2rem;
+}
+
+.avatarContainer {
+  margin: 1rem 0 3rem;
+}
+
+.avatar {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 6rem;
+  margin: 0 auto;
+  cursor: pointer;
+  background-size: 12rem;
+  background-position: center 0;
+  transition: 0.15s;
+
+  &:hover, &Active {
+    background-size: 13rem;
+    background-position-y: -0.6rem;
+  }
+}

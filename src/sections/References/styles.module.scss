@@ -1,0 +1,25 @@
+$row-icon-size: 1.1rem;
+
+.root {
+}
+
+.reference:not(:first-child) {
+  padding-top: 1.5rem;
+}
+
+.name {
+  margin-bottom: 0.5rem;
+}
+
+.row {
+  align-items: center;
+  padding: 0.2rem 1rem;
+
+  .rowIcon {
+    margin-right: 0.6rem;
+    width: $row-icon-size;
+    height: $row-icon-size;
+    color: var(--color-primary);
+  }
+}
+

@@ -1,0 +1,17 @@
+.root {
+
+}
+
+.row:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.texts {
+  color: var(--color-primary);
+  margin-top: 0.2rem;
+}
+
+.dates {
+  width: 8rem;
+}
+

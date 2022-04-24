@@ -11,6 +11,7 @@ type Props = {
   title: string;
   align?: 'left' | 'center' | 'right';
   className?: string;
+  contentClassName?: string;
   children: JSX.Element | JSX.Element[];
 };
 
@@ -20,6 +21,7 @@ export default ({
   title,
   align = 'left',
   className,
+  contentClassName,
   children
 }: Props): JSX.Element => (
   <div className={cn(s.root, className)}>
@@ -27,6 +29,6 @@ export default ({
       <Icon icon={icon} set={iconSet} className={s.titleIcon} />
       <h2 className={s.titleText}>{title}</h2>
     </div>
-    <div>{children}</div>
+    <div className={contentClassName}>{children}</div>
   </div>
 );

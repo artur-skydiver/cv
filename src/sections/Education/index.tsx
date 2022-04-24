@@ -14,7 +14,7 @@ export default () => (
         <h3>{name}</h3>
         <div className={cn('row', s.texts)}>
           <div className={s.dates}>{dates}</div>
-          <div className="grow1">{subject}</div>
+          <div className={cn('grow1', s.subject)}>{subject}</div>
         </div>
       </div>
     ))}

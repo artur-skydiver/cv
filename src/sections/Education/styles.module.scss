@@ -1,3 +1,5 @@
+@import 'src/styles/media';
+
 .root {
 
 }
@@ -7,11 +9,24 @@
 }
 
 .texts {
+  display: flex;
+  flex-direction: row;
   color: var(--color-primary);
   margin-top: 0.2rem;
 }
 
 .dates {
-  width: 8rem;
+  min-width: 8rem;
+  white-space: nowrap;
+
+  @include mobile-only {
+    min-width: 6.5rem;
+  }
+}
+
+.subject {
+  @include mobile-only {
+    text-align: right;
+  }
 }
 

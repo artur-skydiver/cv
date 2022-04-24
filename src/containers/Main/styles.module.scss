@@ -1,6 +1,21 @@
 @import 'src/styles/variables';
+@import 'src/styles/media';
 
 .root {
-  padding: 2rem;
-  margin-right: $extra-width;
+  padding: $padding-desktop;
+  margin-right: $extra-width-desktop;
+
+  @include tablet-landscape {
+    margin-right: $extra-width-landscape;
+    padding: $padding-landscape;
+  }
+
+  @include tablet-portrait {
+    padding: $padding-portrait;
+    margin-right: 0;
+  }
+
+  @include mobile-only {
+    padding: $padding-mobile;
+  }
 }

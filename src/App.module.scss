@@ -1,3 +1,8 @@
-.root {
+@import 'src/styles/media';
 
+.root {
+  @include tablet-portrait {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

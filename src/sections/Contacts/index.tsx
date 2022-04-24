@@ -22,14 +22,16 @@ type RowProps = {
 const Row: React.FC<RowProps> = ({ icon, text, link, children }) => (
   <li className={s.row}>
     <Icon icon={icon} set="solid" className={s.icon} />
-    {children ||
-      (link ? (
-        <a href={link.href} target="_blank" rel="noreferrer">
-          {link.text}
-        </a>
-      ) : (
-        <span>{text}</span>
-      ))}
+    <div>
+      {children ||
+        (link ? (
+          <a href={link.href} target="_blank" rel="noreferrer">
+            {link.text}
+          </a>
+        ) : (
+          <span>{text}</span>
+        ))}
+    </div>
   </li>
 );
 

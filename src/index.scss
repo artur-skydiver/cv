@@ -1,6 +1,7 @@
 @import './styles/fonts.scss';
 @import './styles/colors.scss';
 @import './styles/theme.scss';
+@import './styles/media';
 
 * {
   box-sizing: border-box;
@@ -15,6 +16,10 @@ html, body {
   color: var(--text-color);
   background-color: var(--background);
   overscroll-behavior: none;
+
+  @include mobile-only {
+    font-size: 16px;
+  }
 }
 
 h1 {
@@ -22,6 +27,10 @@ h1 {
   font-size: 3rem;
   line-height: 1.3em;
   letter-spacing: 0.1em;
+
+  @include mobile-only {
+    font-size: 2.2rem;
+  }
 }
 
 h2 {

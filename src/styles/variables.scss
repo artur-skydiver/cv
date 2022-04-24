@@ -1,1 +1,20 @@
-$extra-width: 22rem;
+// mobile <
+
+$breakpoint-mobile: 640;
+$padding-mobile: 20px;
+
+// >= tablet-portrait <
+
+$breakpoint-portrait: 960;
+$padding-portrait: 30px;
+
+// >= tablet-landscape <
+
+$breakpoint-landscape: 1200;
+$extra-width-landscape: 18rem;
+$padding-landscape: 30px;
+
+// >= desktop
+
+$extra-width-desktop: 22rem;
+$padding-desktop: 40px;

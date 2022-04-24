@@ -32,6 +32,7 @@
         "import/no-named-as-default": [ "off" ],
         "import/no-named-as-default-member": [ "off" ],
         "react-hooks/exhaustive-deps": [ "off" ],
+        "no-else-return": [ "off" ],
         "react/require-default-props": [ "warn" ],
         "@typescript-eslint/no-unused-vars": [ "warn" ],
         "no-param-reassign": [ "warn" ]

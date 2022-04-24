@@ -34,12 +34,17 @@ const Row: React.FC<RowProps> = ({ icon, text, link }) => (
   </li>
 );
 
-export default () => (
+type Props = {
+  className?: string;
+};
+
+export default ({ className }: Props) => (
   <Section
     icon="thumbs-up"
     title="References"
     align="center"
-    className={s.root}
+    className={cn(s.root, className)}
+    contentClassName={s.content}
   >
     {references.map(({ name, position, company, phone, email }) => (
       <div key={`reference-${company}-${name}`} className={s.reference}>

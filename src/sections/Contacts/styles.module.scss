@@ -1,11 +1,17 @@
+@import 'src/styles/media';
+
 .root {
   margin: 1rem 2rem;
+
+  @include mobile-only {
+    margin: 1rem 0;
+  }
 }
 
 .row {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   padding: 0.25rem 0;
 
   .icon {
@@ -19,6 +25,7 @@
     display: inline-flex;
     align-items: center;
     margin-right: 0.5rem;
+    white-space: nowrap;
 
     .phoneMessengerIcon {
       width: 1.1rem;
@@ -32,6 +39,12 @@
   display: inline-grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 3rem;
+  grid-column-gap: 2.5rem;
   grid-row-gap: 0;
+
+  @include tablet-landscape {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-column-gap: 0;
+  }
 }

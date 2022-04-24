@@ -1,21 +1,53 @@
 @import 'src/styles/variables';
+@import 'src/styles/media';
 
 .root {
   position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
-  width: $extra-width;
+  width: $extra-width-desktop;
   box-sizing: content-box;
   background-color: var(--light);
+
+  @include tablet-landscape {
+    width: $extra-width-landscape;
+  }
+
+  @include tablet-portrait {
+    position: static;
+    width: auto;
+  }
 }
 
 .content {
-  padding: 2rem;
+  padding: $padding-desktop;
+
+  @include tablet-landscape {
+    padding: $padding-landscape;
+  }
+
+  @include tablet-portrait {
+    padding: $padding-portrait;
+  }
+
+  @include mobile-only {
+    padding: $padding-mobile;
+  }
 }
 
 .avatarContainer {
   margin: 1rem 0 3rem;
+}
+
+@mixin activeAvatar {
+  background-size: 13rem;
+  background-position-y: -0.6rem;
+
+  @include tablet-landscape {
+    background-size: 11rem;
+    background-position-y: -0.5rem;
+  }
 }
 
 .avatar {
@@ -28,8 +60,25 @@
   background-position: center 0;
   transition: 0.15s;
 
-  &:hover, &Active {
-    background-size: 13rem;
-    background-position-y: -0.6rem;
+  @include tablet-landscape {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5rem;
+    background-size: 10rem;
   }
+
+  @include hover {
+    @include activeAvatar;
+  }
+
+  &Active {
+    @include activeAvatar;
+  }
+}
+
+.name {
+  width: 100%;
+  text-align: center;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
 }

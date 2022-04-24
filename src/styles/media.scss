@@ -1,0 +1,33 @@
+@use 'variables';
+
+@mixin mobile-only {
+  @media screen and (max-width: #{variables.$breakpoint-mobile - 1}px) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media screen and (max-width: #{variables.$breakpoint-portrait}px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media screen and (max-width: #{variables.$breakpoint-landscape - 1}px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{variables.$breakpoint-landscape}px) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

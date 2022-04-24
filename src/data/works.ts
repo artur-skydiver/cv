@@ -70,7 +70,7 @@ const works: Place[] = [
     title: 'Application developer',
     company: 'NexWeel',
     dates: 'Mar. 2017 – Jan. 2018',
-    address: '38 Rishelievskaya Street, Odessa, Ukraine, 65011',
+    address: '38 Rishelievskaya Street, Odessa, Ukraine',
     duties: ['Software development', 'WEB development'],
     tools: ['Delphi', 'JavaScript', 'PHP', 'MySQL'],
     description:
@@ -80,7 +80,7 @@ const works: Place[] = [
     title: 'WEB Full-stack developer',
     company: 'Skylogic',
     dates: 'Apr. 2016 – Feb. 2017',
-    address: '19/21 Book Lane, Odessa, Ukraine, 65007',
+    address: '19/21 Book Lane, Odessa, Ukraine',
     duties: [
       'Development of new websites',
       'Maintenance of the old sites',
@@ -120,7 +120,7 @@ const works: Place[] = [
     partTime: true,
     company: 'Sports Federation Of Bodybuilding Of The Odessa Region',
     dates: 'Sep. 2010 – May. 2014',
-    address: '31 Shevchenko Avenue, Odessa, Ukraine, 65058',
+    address: '31 Shevchenko Avenue, Odessa, Ukraine',
     duties: [
       'Software development',
       'Technical support for various sport competitions'

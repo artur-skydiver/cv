@@ -21,6 +21,7 @@
 
 .date {
   color: var(--color-primary);
+  margin-right: 1rem;
 }
 
 .address {
@@ -58,15 +59,18 @@
   & > ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
 
     li {
       background-color: var(--light);
       margin-right: 0.3rem;
+      margin-bottom: 0.3rem;
       padding: 0.1rem 0.6rem;
       font-size: 0.8rem;
       border-radius: 0.2rem;
+      white-space: nowrap;
     }
   }
 }

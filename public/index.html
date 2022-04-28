@@ -7,6 +7,18 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Artur Blieshcheiev | CV</title>
+    <script type="text/javascript">
+      let isDarkTheme = false;
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        isDarkTheme = savedTheme === 'dark';
+      } else if (window.matchMedia) {
+        isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+      if (isDarkTheme) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

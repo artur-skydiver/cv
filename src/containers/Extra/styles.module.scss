@@ -9,6 +9,7 @@
   width: $extra-width-desktop;
   box-sizing: content-box;
   background-color: var(--light);
+  transition: background-color var(--theme-change-transition);
 
   @include tablet-landscape {
     width: $extra-width-landscape;
@@ -74,6 +75,10 @@
   &Active {
     @include activeAvatar;
   }
+}
+
+.header {
+  float: right;
 }
 
 .name {

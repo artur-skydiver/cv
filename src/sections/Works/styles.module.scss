@@ -12,6 +12,7 @@
     height: 1px;
     background-color: var(--middle);
     margin: 0 auto 1.5rem auto;
+    transition: background-color var(--theme-change-transition);
   }
 }
 
@@ -22,6 +23,7 @@
 .date {
   color: var(--color-primary);
   margin-right: 1rem;
+  transition: color var(--theme-change-transition);
 }
 
 .address {
@@ -29,6 +31,7 @@
   font-size: 0.9rem;
   font-weight: 300;
   font-style: italic;
+  transition: color var(--theme-change-transition);
 }
 
 .duties {
@@ -38,6 +41,7 @@
     padding-right: 2rem;
     font-weight: 600;
     color: var(--dark);
+    transition: color var(--theme-change-transition);
   }
 
   & > ul > li {
@@ -54,6 +58,7 @@
     font-weight: 600;
     color: var(--dark);
     margin-top: 0.1rem;
+    transition: color var(--theme-change-transition);
   }
 
   & > ul {
@@ -71,6 +76,7 @@
       font-size: 0.8rem;
       border-radius: 0.2rem;
       white-space: nowrap;
+      transition: background-color var(--theme-change-transition);
     }
   }
 }

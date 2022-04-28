@@ -1,0 +1,61 @@
+@import 'src/styles/media';
+
+$width: 2.4rem;
+$height: 0.7rem;
+$toggle: 1.2rem;
+
+.root {
+  cursor: pointer;
+  display: block;
+  padding: calc((#{$toggle} - #{$height}) / 2);
+  position: relative;
+  width: $width;
+
+  @include hover {
+    .toggle {
+      background-color: var(--dark);
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked + .toggle {
+      left: calc(100% - #{$width} / 2);
+    }
+  }
+}
+
+.back {
+  background-color: var(--light);
+  border: 1px solid var(--middle);
+  border-radius: calc(#{$height} / 2);
+  height: $height;
+  transition: background-color var(--theme-change-transition),
+    border-color var(--theme-change-transition);
+}
+
+.toggle {
+  width: $toggle;
+  height: $toggle;
+  border-radius: calc(#{$toggle} / 2);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--middle);
+  transition: background-color 0.2s, left var(--theme-change-transition);
+
+  &_icon {
+    width: calc(#{$toggle} * 0.5);
+    height: calc(#{$toggle} * 0.5);
+    left: calc(#{$toggle} * 0.25);
+    opacity: 0;
+    position: absolute;
+    top: calc(#{$toggle} * 0.25);
+    transition: opacity var(--theme-change-transition);
+
+    &_show {
+      opacity: 1;
+    }
+  }
+}

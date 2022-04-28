@@ -2,6 +2,7 @@ $row-icon-size: 1.1rem;
 
 .root {
   background-color: var(--light);
+  transition: background-color var(--theme-change-transition);
 }
 
 .content {

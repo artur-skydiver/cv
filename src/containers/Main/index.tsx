@@ -2,6 +2,8 @@ import React from 'react';
 
 import useMedia from 'utils/media';
 
+import Options from 'containers/Options';
+
 import Contacts from 'sections/Contacts';
 import Personal from 'sections/Personal';
 import Works from 'sections/Works';
@@ -12,10 +14,16 @@ import References from 'sections/References';
 
 import s from './styles.module.scss';
 
-const Name = () => {
+const Header = () => {
   const { isDesktop, isLandscape } = useMedia();
-  const needName = isDesktop || isLandscape;
-  return needName ? <h1>Artur Blieshcheiev</h1> : null;
+  const needHeader = isDesktop || isLandscape;
+  if (!needHeader) return null;
+  return (
+    <div className={s.header}>
+      <h1 className={s.name}>Artur Blieshcheiev</h1>
+      <Options />
+    </div>
+  );
 };
 
 const ReferencesBlock = () => {
@@ -29,13 +37,8 @@ export default () => {
     <>
       <ReferencesBlock />
       <div className={s.root}>
-        <div>
-          <div>
-            <Name />
-            <Contacts />
-          </div>
-          <div />
-        </div>
+        <Header />
+        <Contacts />
         <Personal />
         <Works />
         <Experience />

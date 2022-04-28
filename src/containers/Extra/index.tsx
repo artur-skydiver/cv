@@ -2,6 +2,8 @@ import React, { useEffect, useCallback, useRef } from 'react';
 
 import useMedia from 'utils/media';
 
+import Options from 'containers/Options';
+
 import Skills from 'sections/Skills';
 import Languages from 'sections/Languages';
 import References from 'sections/References';
@@ -9,6 +11,13 @@ import References from 'sections/References';
 import Photos from './Photos';
 
 import s from './styles.module.scss';
+
+const Header = () => {
+  const { isMobile, isPortrait } = useMedia();
+  const needHeader = isMobile || isPortrait;
+  if (!needHeader) return null;
+  return <Options className={s.header} />;
+};
 
 const Name = () => {
   const { isMobile, isPortrait } = useMedia();
@@ -71,6 +80,7 @@ export default () => {
   return (
     <div className={s.root} ref={contentRef}>
       <div className={s.content}>
+        <Header />
         <Photos
           onGalleryToggle={onGalleryToggle}
           className={s.avatarContainer}

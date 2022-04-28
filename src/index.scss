@@ -16,6 +16,8 @@ html, body {
   color: var(--text-color);
   background-color: var(--background);
   overscroll-behavior: none;
+  transition: color var(--theme-change-transition),
+    background-color var(--theme-change-transition);
 
   @include mobile-only {
     font-size: 16px;

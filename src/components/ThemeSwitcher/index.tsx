@@ -1,11 +1,22 @@
 import React, { useCallback, useState } from 'react';
 import cx from 'classnames';
 
-import styles from './styles.module.scss';
+import s from './styles.module.scss';
 
 const THEME = 'theme';
 
 type Theme = 'dark' | 'light';
+
+let isDarkTheme = false;
+const savedTheme = localStorage.getItem(THEME) as Theme;
+if (savedTheme) {
+  isDarkTheme = savedTheme === 'dark';
+} else if (window.matchMedia) {
+  isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+if (isDarkTheme) {
+  document.documentElement.setAttribute('data-theme', 'dark');
+}
 
 type Props = {
   className?: string;
@@ -24,24 +35,21 @@ export default ({ className }: Props): JSX.Element => {
   }, [theme]);
 
   return (
-    <label className={cx(styles.root, className)}>
+    <label className={cx(s.root, className)}>
       <input
         type="checkbox"
         checked={theme === 'dark'}
         onClick={toggleTheme}
         onChange={() => null}
       />
-      <div className={styles.toggle}>
+      <div className={s.toggle}>
         <svg
           width="12"
           height="12"
           viewBox="0 0 12 12"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={cx(
-            styles.toggle_icon,
-            theme === 'light' && styles.toggle_icon_show
-          )}
+          className={cx(s.toggle_icon, theme === 'light' && s.toggle_icon_show)}
         >
           <path
             d="M6.00022 3.27246C5.2769 3.27246 4.58321 3.5598 4.07175 4.07126C3.56029 4.58272 3.27295 5.27642 3.27295 5.99973C3.27295 6.72305 3.56029 7.41674 4.07175 7.92821C4.58321 8.43967 5.2769 8.72701 6.00022 8.72701C6.72354 8.72701 7.41723 8.43967 7.9287 7.92821C8.44016 7.41674 8.72749 6.72305 8.72749 5.99973C8.72749 5.27642 8.44016 4.58272 7.9287 4.07126C7.41723 3.5598 6.72354 3.27246 6.00022 3.27246V3.27246Z"
@@ -60,10 +68,7 @@ export default ({ className }: Props): JSX.Element => {
           viewBox="0 0 12 12"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={cx(
-            styles.toggle_icon,
-            theme === 'dark' && styles.toggle_icon_show
-          )}
+          className={cx(s.toggle_icon, theme === 'dark' && s.toggle_icon_show)}
         >
           <path
             d="M8.08886 0.375C8.71563 1.3028 9.05006 2.39709 9.04905 3.51675C9.04905 6.64819 6.48293 9.18675 3.31718 9.18675C2.28216 9.18867 1.26583 8.91109 0.375488 8.38331C1.35199 10.3056 3.36218 11.625 5.68493 11.625C8.9658 11.625 11.6253 8.99419 11.6253 5.74875C11.6253 3.35006 10.1714 1.28831 8.08886 0.375Z"
@@ -71,7 +76,7 @@ export default ({ className }: Props): JSX.Element => {
           />
         </svg>
       </div>
-      <div className={styles.back} />
+      <div className={s.back} />
     </label>
   );
 };

@@ -1,0 +1,77 @@
+@import 'src/styles/media';
+
+.root {
+  width: 5rem;
+  position: relative;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 0.8rem;
+  min-height: 2rem;
+  cursor: pointer;
+  background-color: var(--light);
+  transition: background-color var(--theme-change-transition);
+
+  @include tablet-portrait {
+    background-color: var(--middle);
+  }
+
+  input {
+    display: none;
+  }
+
+  .flag {
+    width: 1.2rem;
+    height: 0.9rem;
+    border-radius: 0.1rem;
+    margin-right: 0.4rem;
+  }
+}
+
+@mixin dropped {
+  max-height: 10rem;
+}
+
+.value {
+  width: 5rem;
+  border-radius: 0.2rem;
+
+  &:hover + .dropdown {
+    @include dropped;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  box-shadow: 0px -0.2rem var(--light);
+
+  @include tablet-portrait {
+    box-shadow: 0px -0.2rem var(--middle);
+  }
+
+  @include hover {
+    @include dropped;
+  }
+
+  .item {
+    &:last-child {
+      border-bottom-left-radius: 0.2rem;
+      border-bottom-right-radius: 0.2rem;
+    }
+
+    @include hover {
+      background-color: var(--middle);
+    }
+  }
+}

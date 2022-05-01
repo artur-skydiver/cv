@@ -8,6 +8,8 @@ import Skills from 'sections/Skills';
 import Languages from 'sections/Languages';
 import References from 'sections/References';
 
+import Name from 'components/Name';
+
 import Photos from './Photos';
 
 import s from './styles.module.scss';
@@ -19,10 +21,10 @@ const Header = () => {
   return <Options className={s.header} />;
 };
 
-const Name = () => {
+const NameBlock = () => {
   const { isMobile, isPortrait } = useMedia();
   const needName = isMobile || isPortrait;
-  return needName ? <h1 className={s.name}>Artur Blieshcheiev</h1> : null;
+  return needName ? <Name className={s.name} /> : null;
 };
 
 const ReferencesBlock = () => {
@@ -85,7 +87,7 @@ export default () => {
           onGalleryToggle={onGalleryToggle}
           className={s.avatarContainer}
         />
-        <Name />
+        <NameBlock />
         <Skills />
         <Languages />
         <ReferencesBlock />

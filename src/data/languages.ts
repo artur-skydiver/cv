@@ -1,23 +1,25 @@
+import { Locales } from 'localization';
+
 interface Language {
-  name: string;
-  level: string;
+  name: Locales;
+  level: Locales;
   percent: number;
 }
 
 const languages: Language[] = [
   {
-    name: 'English',
-    level: 'Intermediate',
+    name: { en: 'English', ru: 'Английский', uk: 'Англійська' },
+    level: { en: 'Intermediate', ru: 'Средний', uk: 'Середній' },
     percent: 40
   },
   {
-    name: 'Russian',
-    level: 'Native speaker',
+    name: { en: 'Russian', ru: 'Русский', uk: 'Російська' },
+    level: { en: 'Native speaker', ru: 'Носитель языка', uk: 'Рідна мова' },
     percent: 100
   },
   {
-    name: 'Ukrainian',
-    level: 'Fluent',
+    name: { en: 'Ukrainian', ru: 'Украинский', uk: 'Українська' },
+    level: { en: 'Fluent', ru: 'Свободно', uk: 'Вільно' },
     percent: 85
   }
 ];

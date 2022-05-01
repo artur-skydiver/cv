@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Locales, useLocales } from 'localization';
 import { getLinkFromEmail, getLinkFromPhone } from 'utils/maps';
 
 import Icon, { IconProp } from 'components/Icon';
@@ -12,28 +13,31 @@ const { birth, address, email, phones, socials } = contacts;
 
 type RowProps = {
   icon: IconProp;
-  text?: string;
+  text?: string | Locales;
   link?: {
     href: string;
     text: string;
   };
 };
 
-const Row: React.FC<RowProps> = ({ icon, text, link, children }) => (
-  <li className={s.row}>
-    <Icon icon={icon} set="solid" className={s.icon} />
-    <div>
-      {children ||
-        (link ? (
-          <a href={link.href} target="_blank" rel="noreferrer">
-            {link.text}
-          </a>
-        ) : (
-          <span>{text}</span>
-        ))}
-    </div>
-  </li>
-);
+const Row: React.FC<RowProps> = ({ icon, text, link, children }) => {
+  const { l } = useLocales();
+  return (
+    <li className={s.row}>
+      <Icon icon={icon} set="solid" className={s.icon} />
+      <div>
+        {children ||
+          (link ? (
+            <a href={link.href} target="_blank" rel="noreferrer">
+              {link.text}
+            </a>
+          ) : (
+            <span>{l(text)}</span>
+          ))}
+      </div>
+    </li>
+  );
+};
 
 export default () => (
   <div className={s.root}>

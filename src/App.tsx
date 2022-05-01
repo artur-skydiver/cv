@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import 'localization';
+
 import Main from 'containers/Main';
 import Extra from 'containers/Extra';
 

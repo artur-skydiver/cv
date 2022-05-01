@@ -12,6 +12,8 @@ import Education from 'sections/Education';
 import Additional from 'sections/Additional';
 import References from 'sections/References';
 
+import Name from 'components/Name';
+
 import s from './styles.module.scss';
 
 const Header = () => {
@@ -20,7 +22,7 @@ const Header = () => {
   if (!needHeader) return null;
   return (
     <div className={s.header}>
-      <h1 className={s.name}>Artur Blieshcheiev</h1>
+      <Name className={s.name} />
       <Options />
     </div>
   );

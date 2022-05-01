@@ -1,0 +1,42 @@
+{
+  "name": "Eng",
+
+  "sections": {
+
+    "personal": {
+      "title": "Personal profile"
+    },
+
+    "works": {
+      "title": "Professional background",
+      "part": "part-time",
+      "duties": "Duties",
+      "tools": "Tools"
+    },
+
+    "experience": {
+      "title": "Additional employment and experience"
+    },
+
+    "education": {
+      "title": "Education"
+    },
+
+    "additional": {
+      "title": "Additional information"
+    },
+
+    "skills": {
+      "title": "Skills"
+    },
+
+    "languages": {
+      "title": "Languages"
+    },
+
+    "references": {
+      "title": "References"
+    }
+
+  }
+}

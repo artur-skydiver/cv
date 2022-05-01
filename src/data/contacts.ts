@@ -1,3 +1,4 @@
+import type { IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import {
   faViber,
   faWhatsapp,
@@ -7,17 +8,48 @@ import {
   faTelegram
 } from '@fortawesome/free-brands-svg-icons';
 
-export default {
-  birth: '05 October 1990',
-  address: 'Odessa, Ukraine, 65072',
+import type { Locales } from 'localization';
+
+type PhoneMessenger = {
+  icon: IconDefinition;
+  color: string;
+};
+
+type Phone =
+  | string
+  | {
+      number: string;
+      messengers: PhoneMessenger[];
+    };
+
+type Social = {
+  icon: IconDefinition;
+  text: string;
+  link: string;
+};
+
+interface Contacts {
+  birth: Locales;
+  address: Locales;
+  email: string;
+  phones: Phone[];
+  socials: Social[];
+}
+
+const contacts: Contacts = {
+  birth: { en: '05 October 1990', ru: '05 Октября 1990', uk: '05 Жовтня 1990' },
+  address: {
+    en: 'Odessa, Ukraine, 65072',
+    ru: 'Одесса, Украина, 65072',
+    uk: 'Одеса, Україна, 65072'
+  },
   email: 'bleshcheev90@gmail.com',
   phones: [
     {
       number: '+38 063 135-96-06',
       messengers: [
         { icon: faViber, color: '#ae4b85' },
-        { icon: faWhatsapp, color: '#009847' },
-        { icon: faTelegram, color: '#2ea6e1' }
+        { icon: faWhatsapp, color: '#009847' }
       ]
     },
     '+38 048 798-08-84'
@@ -45,3 +77,5 @@ export default {
     }
   ]
 };
+
+export default contacts;

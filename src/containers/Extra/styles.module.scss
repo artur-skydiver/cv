@@ -78,7 +78,15 @@
 }
 
 .header {
-  float: right;
+  @include tablet-portrait {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    & > *:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
 }
 
 .name {

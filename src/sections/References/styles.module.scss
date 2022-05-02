@@ -12,8 +12,12 @@ $row-icon-size: 1.1rem;
   justify-content: space-around;
 }
 
-.reference:not(:last-child) {
-  padding-bottom: 1.5rem;
+.reference {
+  width: 16rem;
+
+  &:not(:last-child) {
+    padding-bottom: 1.5rem;
+  }
 }
 
 .name {

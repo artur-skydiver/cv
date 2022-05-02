@@ -18,18 +18,15 @@ export default () => {
       align="center"
       className={s.root}
     >
-      {languages.map(({ name, level, percent }) => {
-        const langName = l(name);
-        return (
-          <Progress
-            key={`language-${langName}`}
-            title={langName}
-            level={l(level)}
-            percent={percent}
-            className={s.progress}
-          />
-        );
-      })}
+      {languages.map(({ name, level, percent }, index) => (
+        <Progress
+          key={`language-${index.toString()}`}
+          title={l(name)}
+          level={l(level)}
+          percent={percent}
+          className={s.progress}
+        />
+      ))}
     </Section>
   );
 };

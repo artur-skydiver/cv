@@ -4,6 +4,7 @@ import { Locales, useLocales } from 'localization';
 import { getLinkFromEmail, getLinkFromPhone } from 'utils/maps';
 
 import Icon, { IconProp } from 'components/Icon';
+import Transition from 'components/Transition';
 
 import contacts from 'data/contacts';
 
@@ -32,7 +33,7 @@ const Row: React.FC<RowProps> = ({ icon, text, link, children }) => {
               {link.text}
             </a>
           ) : (
-            <span>{l(text)}</span>
+            <Transition text={text} />
           ))}
       </div>
     </li>

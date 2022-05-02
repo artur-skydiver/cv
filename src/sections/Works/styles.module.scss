@@ -25,6 +25,7 @@
 .date {
   color: var(--color-primary);
   margin-right: 1rem;
+  white-space: nowrap;
   transition: color var(--theme-change-transition);
 }
 
@@ -33,13 +34,13 @@
   font-size: 0.9rem;
   font-weight: 300;
   font-style: italic;
+  white-space: nowrap;
   transition: color var(--theme-change-transition);
 }
 
 .lists {
   display: grid;
   grid-template-columns: auto 1fr;
-  //grid-template-rows: repeat(2, auto);
   grid-column-gap: 2rem;
   grid-row-gap: 0.8rem;
   margin: 0.8rem 0;
@@ -50,7 +51,6 @@
 
   @include mobile-only {
     grid-template-columns: auto;
-    //grid-template-rows: repeat(2, auto);
   }
 
   .listTitle {
@@ -62,10 +62,6 @@
       display: none;
     }
   }
-}
-
-.duties > li {
-  list-style: '– ' inside;
 }
 
 .tools {

@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <div className={s.header}>
       <Name className={s.name} />
-      <Options />
+      <Options className={s.options} />
     </div>
   );
 };

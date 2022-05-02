@@ -3,6 +3,8 @@ import cn from 'classnames';
 
 import { useLocales } from 'localization';
 
+import Transition from 'components/Transition';
+
 import s from './styles.module.scss';
 
 type Props = {
@@ -16,5 +18,5 @@ export default ({ className }: Props): JSX.Element => {
     ru: 'Артур Блещеев',
     uk: 'Артур Блєщеєв'
   });
-  return <h1 className={cn(s.root, className)}>{langName}</h1>;
+  return <Transition node="h1" text={langName} className={cn(s.root, className)} />;
 };

@@ -6,6 +6,7 @@ import { getLinkFromEmail, getLinkFromPhone } from 'utils/maps';
 
 import Section from 'components/Section';
 import Icon, { IconProp } from 'components/Icon';
+import Transition from 'components/Transition';
 
 import references from 'data/references';
 
@@ -29,7 +30,7 @@ const Row: React.FC<RowProps> = ({ icon, text, link }) => (
           {link.text}
         </a>
       ) : (
-        <span>{text}</span>
+        <Transition text={text} />
       )}
     </div>
   </li>
@@ -49,31 +50,23 @@ export default ({ className }: Props) => {
       className={cn(s.root, className)}
       contentClassName={s.content}
     >
-      {references.map(({ name, position, company, phone, email }) => {
-        const langName = l(name);
-        const langPosition = l(position);
-        const langCompany = l(company);
-        return (
-          <div
-            key={`reference-${langCompany}-${langName}`}
-            className={s.reference}
-          >
-            <h3 className={s.name}>{langName}</h3>
-            <ul>
-              <Row icon="briefcase" text={langPosition} />
-              <Row icon="building" text={langCompany} />
-              <Row
-                icon="phone"
-                link={{ text: phone, href: getLinkFromPhone(phone) }}
-              />
-              <Row
-                icon="envelope"
-                link={{ text: email, href: getLinkFromEmail(email) }}
-              />
-            </ul>
-          </div>
-        );
-      })}
+      {references.map(({ name, position, company, phone, email }, index) => (
+        <div key={`reference-${index.toString()}`} className={s.reference}>
+          <Transition text={l(name)} className={s.name} />
+          <ul>
+            <Row icon="briefcase" text={l(position)} />
+            <Row icon="building" text={l(company)} />
+            <Row
+              icon="phone"
+              link={{ text: phone, href: getLinkFromPhone(phone) }}
+            />
+            <Row
+              icon="envelope"
+              link={{ text: email, href: getLinkFromEmail(email) }}
+            />
+          </ul>
+        </div>
+      ))}
     </Section>
   );
 };

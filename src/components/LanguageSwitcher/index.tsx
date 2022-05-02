@@ -1,5 +1,6 @@
 import React, { MouseEventHandler, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDebouncedCallback } from 'use-debounce';
 import cn from 'classnames';
 import 'flag-icons';
 
@@ -39,9 +40,11 @@ const Item = ({ lang, onClick, className }: ItemProps) => {
 export default ({ className }: Props): JSX.Element => {
   const { i18n } = useTranslation();
 
-  const changeLang = useCallback(({ target }) => {
-    i18n.changeLanguage(target.value);
-  }, []);
+  const changeLang = useDebouncedCallback(
+    ({ target }) => i18n.changeLanguage(target.value),
+    500,
+    { leading: true }
+  );
 
   const langs = useMemo(
     () => Object.keys(i18n.options.resources || {}),

@@ -26,7 +26,20 @@
   justify-content: space-between;
   align-items: flex-start;
 
-  h1 {
-    padding-right: 2rem;
+  .name {
+    margin-right: 2rem;
+    flex-grow: 1;
+  }
+
+  @include tablet-landscape {
+    .name {
+      max-width: 0;
+    }
+
+    .options {
+      position: absolute;
+      top: $padding-landscape;
+      right: calc( #{$extra-width-landscape} + #{$padding-landscape} );
+    }
   }
 }

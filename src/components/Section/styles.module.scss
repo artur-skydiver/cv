@@ -4,30 +4,35 @@
   padding: 1.5rem 0;
 }
 
-.left { justify-content: flex-start; }
-.center { justify-content: center; }
-.right { justify-content: flex-end; }
-
-.title {
+.header {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0 1rem 1.5rem 1rem;
 
-  .titleIcon {
-    color: var(--text-color);
-    width: 1rem;
-    height: 1rem;
-    margin-right: 1rem;
-    margin-top: 0.5rem;
-    transition: color var(--theme-change-transition);
+  .title {
+    display: flex;
+    flex-direction: row;
 
-    @include mobile-only {
-      margin-top: 0.4rem;
+    .titleIcon {
+      color: var(--text-color);
+      width: 1rem;
+      height: 1rem;
+      margin-right: 1rem;
+      margin-top: 0.5rem;
+      transition: color var(--theme-change-transition);
+
+      @include mobile-only {
+        margin-top: 0.4rem;
+      }
+    }
+
+    .titleText {
+      flex-grow: 1;
     }
   }
 
-  .titleText {
-
-  }
+  &.left > * { width: 100% }
+  &.center { justify-content: center; }
+  &.right { justify-content: flex-end; }
 }

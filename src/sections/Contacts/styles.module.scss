@@ -21,6 +21,10 @@
     margin-right: 0.7rem;
   }
 
+  & > div {
+    flex-grow: 1;
+  }
+
   .phone {
     display: inline-flex;
     align-items: center;

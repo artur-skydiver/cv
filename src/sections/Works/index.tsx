@@ -4,6 +4,7 @@ import cn from 'classnames';
 import { useLocales } from 'localization';
 
 import Section from 'components/Section';
+import Transition from 'components/Transition';
 
 import works from 'data/works';
 
@@ -14,52 +15,52 @@ export default () => {
   return (
     <Section icon="briefcase" title={t('title')} className={s.root}>
       {works.map(
-        ({
-          title,
-          company,
-          partTime,
-          dates,
-          address,
-          duties,
-          tools,
-          description
-        }) => {
-          const langCompany = l(company);
+        (
+          {
+            title,
+            company,
+            partTime,
+            dates,
+            address,
+            duties,
+            tools,
+            description
+          },
+          index
+        ) => {
+          const mainKey = `works-${index.toString()}`;
           return (
-            <div key={`works-${langCompany}`} className={s.block}>
-              <h3 className={s.title}>
-                {title}
-                {partTime && ` (${t('part')})`} / {langCompany}
-              </h3>
+            <div key={mainKey} className={s.block}>
+              <Transition
+                node="h3"
+                className={s.title}
+                text={`${title} ${partTime && ` (${t('part')})`} / ${l(
+                  company
+                )}`}
+              />
               <div className={cn('row', 'row-wrap')}>
-                <div className={s.date}>{l(dates)}</div>
-                <div className={s.address}>{l(address)}</div>
+                <Transition className={s.date} text={dates} />
+                <Transition className={s.address} text={address} row right />
               </div>
               <div className={s.lists}>
-                <div className={s.listTitle}>{t('duties')}</div>
+                <Transition className={s.listTitle} text={t('duties')} row />
                 <ul className={cn('grow1', s.duties)}>
-                  {duties.map(duty => {
-                    const langDuty = l(duty);
-                    return (
-                      <li key={`works-${langCompany}-duties-${langDuty}`}>
-                        {langDuty}
-                      </li>
-                    );
-                  })}
+                  {duties.map((duty, dutyIndex) => (
+                    <Transition
+                      key={`${mainKey}-duties-${dutyIndex.toString()}`}
+                      node="li"
+                      text={`– ${l(duty)}`}
+                    />
+                  ))}
                 </ul>
-                <div className={s.listTitle}>{t('tools')}</div>
+                <Transition className={s.listTitle} text={t('tools')} row />
                 <ul className={cn('grow1', s.tools)}>
-                  {tools.map(tool => {
-                    const langTool = l(tool);
-                    return (
-                      <li key={`works-${langCompany}-tools-${langTool}`}>
-                        {langTool}
-                      </li>
-                    );
-                  })}
+                  {tools.map(tool => (
+                    <li key={`${mainKey}-tools-${tool}`}>{tool}</li>
+                  ))}
                 </ul>
               </div>
-              <p>{l(description)}</p>
+              <Transition paragraph text={description} />
             </div>
           );
         }

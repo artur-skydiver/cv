@@ -1,6 +1,6 @@
 # Artur Blieshcheiev CV
 
-In the project directory, you can run:
+[https://artur-skydiver.github.io/cv/](https://artur-skydiver.github.io/cv/)
 
 ### `npm i`
 ### `npm start`

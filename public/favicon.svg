@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style>.cls-1{fill:#7a53a2;}.cls-2{fill:#ffcc05;}.cls-3{fill:#fff;}.cls-4{fill:#f77911;}.cls-5{font-size:4px;font-family:MyriadPro-Regular, Myriad Pro;}.cls-6{letter-spacing:-0.0459em;}.cls-7{letter-spacing:-0.07593em;}.cls-8{letter-spacing:-0.00024em;}.cls-9{letter-spacing:0.01196em;}.cls-10{fill:none;}</style>
+    <linearGradient id="gradient-2" bx:pinned="true">
+      <stop offset="0.633" style="stop-color: rgb(30, 46, 127);"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-3" d="M 6.775 7.956 C 6.765 7.443 6.866 6.935 7.074 6.465 C 7.254 6.057 7.552 5.713 7.929 5.476 C 8.319 5.242 8.765 5.122 9.219 5.132 C 9.815 5.103 10.4 5.298 10.861 5.676 C 11.291 6.072 11.548 6.619 11.58 7.203 L 10.367 7.203 C 10.368 6.898 10.255 6.605 10.051 6.38 C 9.816 6.19 9.519 6.098 9.219 6.122 C 8.862 6.1 8.52 6.264 8.313 6.556 C 8.081 6.965 7.974 7.432 8.004 7.9 L 8.004 8.342 C 7.968 8.823 8.068 9.305 8.293 9.732 C 8.496 10.032 8.843 10.198 9.205 10.171 C 9.506 10.195 9.805 10.104 10.043 9.916 C 10.245 9.701 10.36 9.419 10.36 9.124 L 11.571 9.124 C 11.555 9.697 11.301 10.236 10.872 10.615 C 10.4 10.994 9.807 11.187 9.205 11.157 C 8.525 11.191 7.87 10.912 7.423 10.398 C 6.962 9.806 6.733 9.066 6.775 8.314 L 6.775 7.956 Z M 6.801 15.347 L 17.199 15.347 L 17.199 16.758 L 6.801 16.758 L 6.801 15.347 Z M 6.801 18.88 L 17.199 18.88 L 17.199 20.29 L 6.801 20.29 L 6.801 18.88 Z M 13.216 5.132 L 14.542 9.664 L 15.876 5.132 L 17.224 5.132 L 15.175 11.157 L 13.911 11.157 L 11.871 5.132 L 13.216 5.132 Z M 19.011 0 L 4.988 0 C 3.482 -0.031 2.236 1.161 2.203 2.666 L 2.203 21.333 C 2.236 22.837 3.482 24.031 4.988 23.999 L 19.011 23.999 C 20.517 24.031 21.764 22.837 21.797 21.333 L 21.797 2.666 C 21.764 1.161 20.517 -0.031 19.011 0 Z" style="fill-rule: nonzero; paint-order: fill; fill: rgb(13, 176, 241);"/>
+  <text class="cls-5" transform="translate(-0.11103 -13.49447)" style="white-space: pre;">Building<tspan class="cls-6"><tspan x="0" y="4.7998"> </tspan><tspan class="cls-7" x="0.66406" y="4.7998">Y</tspan><tspan class="cls-8" x="2.52441" y="4.7998">our </tspan><tspan class="cls-9" x="9.08008" y="4.7998">C</tspan><tspan class="cls-8" x="11.44824" y="4.7998">V</tspan></tspan></text>
+  <rect class="cls-10" width="24" height="24"/>
+</svg>

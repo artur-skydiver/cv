@@ -14,7 +14,11 @@ export default () => {
   return (
     <Section icon="plus-square" title={t('title')} className={s.root}>
       {l(experience).map((row: string, index: number) => (
-        <Transition paragraph key={`experience-${index.toString()}`} text={row} />
+        <Transition
+          paragraph
+          key={`experience-${index.toString()}`}
+          text={row}
+        />
       ))}
     </Section>
   );

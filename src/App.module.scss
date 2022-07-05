@@ -1,8 +1,33 @@
 @import 'src/styles/media';
+@import 'src/styles/variables';
 
 .root {
   @include tablet-portrait {
     display: flex;
     flex-direction: column-reverse;
+  }
+}
+
+.github {
+  position: absolute;
+  font-size: 0.8rem;
+  left: $padding-desktop;
+  top: 5px;
+  opacity: 0.3;
+
+  @include tablet-landscape {
+    left: $padding-landscape;
+  }
+
+  @include tablet-portrait {
+    left: $padding-portrait;
+  }
+
+  @include mobile-only {
+    left: $padding-mobile;
+  }
+
+  @include hover {
+    opacity: 1;
   }
 }

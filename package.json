@@ -1,6 +1,7 @@
 {
   "name": "cv",
   "version": "0.1.0",
+  "homepage": "https://artur-skydiver.github.io/cv/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.0",
@@ -34,7 +35,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +63,7 @@
     "eslint": "^7.30.0",
     "eslint-config-airbnb-typescript-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.29.4",
+    "gh-pages": "^4.0.0",
     "prettier": "2.6.0",
     "sass": "^1.49.9"
   },

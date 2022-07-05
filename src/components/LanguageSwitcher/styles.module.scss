@@ -3,6 +3,10 @@
 .root {
   width: 5rem;
   position: relative;
+
+  @include tablet-portrait {
+    margin-top: 10px;
+  }
 }
 
 .item {

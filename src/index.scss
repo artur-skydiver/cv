@@ -51,7 +51,7 @@ a {
   text-decoration: underline transparent;
   transition: 0.1s;
 
-  &:hover {
+  @include hover {
     color: var(--link-hover);
     text-decoration: underline var(--link-hover);
   }

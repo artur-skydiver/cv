@@ -34,7 +34,7 @@ export default () => {
               <Transition
                 node="h3"
                 className={s.title}
-                text={`${title} ${partTime && ` (${t('part')})`} / ${l(
+                text={`${title} ${partTime ? ` (${t('part')})` : ''} / ${l(
                   company
                 )}`}
               />

@@ -17,9 +17,9 @@ const works: Place[] = [
     partTime: true,
     company: 'Provectus',
     dates: {
-      en: 'Oct. 2021 – Feb. 2022',
-      ru: 'Окт. 2021 – Фев. 2022',
-      uk: 'Жов. 2021 – Лют. 2022'
+      en: 'Oct. 2021 – Nov. 2022',
+      ru: 'Окт. 2021 – Ноя. 2022',
+      uk: 'Жов. 2021 – Лис. 2022'
     },
     address: { en: 'Remote', ru: 'Удаленно', uk: 'Дистанційно' },
     duties: [
@@ -40,9 +40,9 @@ const works: Place[] = [
     title: 'Full-stack developer',
     company: 'Magic Powered',
     dates: {
-      en: 'Sep. 2021 – Present',
-      ru: 'Сен. 2021 – Настоящее время',
-      uk: 'Вер. 2021 – Даний час'
+      en: 'Sep. 2021 – Jan. 2023',
+      ru: 'Сен. 2021 – Янв. 2023',
+      uk: 'Вер. 2021 – Січ. 2023'
     },
     address: { en: 'Remote', ru: 'Удаленно', uk: 'Дистанційно' },
     duties: [

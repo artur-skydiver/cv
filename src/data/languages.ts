@@ -9,8 +9,12 @@ interface Language {
 const languages: Language[] = [
   {
     name: { en: 'English', ru: 'Английский', uk: 'Англійська' },
-    level: { en: 'Intermediate', ru: 'Средний', uk: 'Середній' },
-    percent: 40
+    level: {
+      en: 'Upper-Intermediate',
+      ru: 'Выше среднего',
+      uk: 'Вище середнього'
+    },
+    percent: 60
   },
   {
     name: { en: 'Russian', ru: 'Русский', uk: 'Російська' },

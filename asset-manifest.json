@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/cv/static/css/main.ee5c3480.css",
-    "main.js": "/cv/static/js/main.6cc68e3f.js",
-    "static/js/703.633ae984.chunk.js": "/cv/static/js/703.633ae984.chunk.js",
-    "static/js/898.e327f552.chunk.js": "/cv/static/js/898.e327f552.chunk.js",
+    "main.css": "/cv/static/css/main.666041a6.css",
+    "main.js": "/cv/static/js/main.3205a6db.js",
+    "static/media/Artur.Blieshcheiev.CV.uk.pdf": "/cv/static/media/Artur.Blieshcheiev.CV.uk.fe2f66d79879dded0304.pdf",
+    "static/media/Artur.Blieshcheiev.CV.ru.pdf": "/cv/static/media/Artur.Blieshcheiev.CV.ru.a21a94022c24defeb977.pdf",
+    "static/media/Artur.Blieshcheiev.CV.en.pdf": "/cv/static/media/Artur.Blieshcheiev.CV.en.4cbc6f5a55e02206cf4d.pdf",
     "static/media/do.svg": "/cv/static/media/do.3ecb625b75ec64be4376.svg",
     "static/media/rs.svg": "/cv/static/media/rs.9f00a7d8eafa6f593713.svg",
     "static/media/bo.svg": "/cv/static/media/bo.88ba0b0a7e48ec71eca8.svg",
@@ -273,13 +274,11 @@
     "static/media/nl.svg": "/cv/static/media/nl.cfe72ae0b3d6d8485234.svg",
     "static/media/pl.svg": "/cv/static/media/pl.cd835d05865e496ff6b8.svg",
     "static/media/bd.svg": "/cv/static/media/bd.0ad8c443ef4d47ea0497.svg",
-    "main.ee5c3480.css.map": "/cv/static/css/main.ee5c3480.css.map",
-    "main.6cc68e3f.js.map": "/cv/static/js/main.6cc68e3f.js.map",
-    "703.633ae984.chunk.js.map": "/cv/static/js/703.633ae984.chunk.js.map",
-    "898.e327f552.chunk.js.map": "/cv/static/js/898.e327f552.chunk.js.map"
+    "main.666041a6.css.map": "/cv/static/css/main.666041a6.css.map",
+    "main.3205a6db.js.map": "/cv/static/js/main.3205a6db.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee5c3480.css",
-    "static/js/main.6cc68e3f.js"
+    "static/css/main.666041a6.css",
+    "static/js/main.3205a6db.js"
   ]
 }

@@ -1,8 +1,17 @@
+@import 'src/styles/media';
+
 $row-icon-size: 1.1rem;
 
 .root {
   background-color: var(--light);
   transition: background-color var(--theme-change-transition);
+
+  @include print {
+    page-break-inside: avoid;
+    page-break-before: auto;
+    page-break-after: auto;
+    background: none;
+  }
 }
 
 .content {

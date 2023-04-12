@@ -1,35 +1,35 @@
 html {
   --theme-change-transition: 0.5s;
+
   &[data-theme-initing] {
     --theme-change-transition: 0;
   }
 
-  &[data-theme='light'],
-  .light-theme {
-    --background: var(--white);
-    --text-color: var(--black);
+  --background: var(--white);
+  --text-color: var(--black);
 
-    --light: var(--grey-10);
-    --middle: var(--grey-20);
-    --dark: var(--grey-30);
+  --light: var(--grey-10);
+  --middle: var(--grey-20);
+  --dark: var(--grey-30);
 
-    --link: var(--black);
-    --link-hover: var(--blue-dark);
+  --link: var(--black);
+  --link-hover: var(--blue-dark);
 
-    --color-primary: var(--blue);
-  }
+  --color-primary: var(--blue);
 
-  &[data-theme='dark'] {
-    --background: var(--black);
-    --text-color: var(--grey-10);
+  @media not print {
+    &[data-theme='dark'] {
+      --background: var(--black);
+      --text-color: var(--grey-10);
 
-    --light: var(--grey-90);
-    --middle: var(--grey-80);
-    --dark: var(--grey-70);
+      --light: var(--grey-90);
+      --middle: var(--grey-80);
+      --dark: var(--grey-70);
 
-    --link: var(--grey-10);
-    --link-hover: var(--blue-dark);
+      --link: var(--grey-10);
+      --link-hover: var(--blue-dark);
 
-    --color-primary: var(--blue);
+      --color-primary: var(--blue);
+    }
   }
 }

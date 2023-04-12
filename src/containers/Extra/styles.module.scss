@@ -19,6 +19,15 @@
     position: static;
     width: auto;
   }
+
+  @include print {
+    position: static;
+    width: $extra-width-print !important;
+    padding: 0;
+    padding-left: $padding-print;
+    background: none;
+    border-left: 1px solid var(--middle);
+  }
 }
 
 .content {
@@ -34,6 +43,14 @@
 
   @include mobile-only {
     padding: $padding-mobile;
+  }
+
+  @include print {
+    padding: $padding-print;
+  }
+
+  @include print {
+    padding: 0;
   }
 }
 
@@ -79,13 +96,10 @@
 
 .header {
   @include tablet-portrait {
+    position: relative;
     width: 100%;
     justify-content: space-between;
-    flex-direction: row-reverse;
-
-    & > *:not(:last-child) {
-      margin-right: 1rem;
-    }
+    padding-top: 0.6rem;
   }
 }
 

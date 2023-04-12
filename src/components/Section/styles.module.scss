@@ -10,6 +10,16 @@
   align-items: flex-start;
   padding: 0 1rem 1.5rem 1rem;
 
+  @include mobile-only {
+    padding: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  @include print {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+
   .title {
     display: flex;
     flex-direction: row;

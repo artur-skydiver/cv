@@ -1,6 +1,11 @@
 {
   "name": "Eng",
 
+  "tools": {
+    "print": "Print",
+    "pdf": "PDF"
+  },
+
   "sections": {
 
     "personal": {

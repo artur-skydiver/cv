@@ -3,6 +3,18 @@
 @import './styles/theme.scss';
 @import './styles/media';
 
+@include print {
+  @page {
+    margin: 15mm 10mm 15mm 20mm;
+    size: A4 portrait;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -21,6 +33,10 @@ html, body {
 
   @include mobile-only {
     font-size: 16px;
+  }
+
+  @include print {
+    font-size: 10pt;
   }
 }
 

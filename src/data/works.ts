@@ -128,9 +128,9 @@ const works: Place[] = [
       uk: 'Бер. 2017 – Січ. 2018'
     },
     address: {
-      en: '38 Rishelievskaya Street, Odessa, Ukraine',
-      ru: 'Украина, Одесса, ул. Ришельевская 38',
-      uk: 'Україна, Одеса, вул. Рішельєвська 38'
+      en: '38 Rishelievskaya Street, Odessa, Ukraine',
+      ru: 'Украина, Одесса, ул. Ришельевская 38',
+      uk: 'Україна, Одеса, вул. Рішельєвська 38'
     },
     duties: [
       {
@@ -160,9 +160,9 @@ const works: Place[] = [
       uk: 'Кві. 2016 – Лют. 2017'
     },
     address: {
-      en: '19/21 Book Lane, Odessa, Ukraine',
-      ru: 'Украина, Одесса, пер. Книжный 19',
-      uk: 'Україна, Одеса, пров. Книжковий 19'
+      en: '19/21 Book Lane, Odessa, Ukraine',
+      ru: 'Украина, Одесса, пер. Книжный 19',
+      uk: 'Україна, Одеса, пров. Книжковий 19'
     },
     duties: [
       {
@@ -248,9 +248,9 @@ const works: Place[] = [
       uk: 'Вер. 2010 – Тра. 2014'
     },
     address: {
-      en: '31 Shevchenko Avenue, Odessa, Ukraine',
-      ru: 'Украина, Одесса, пр-кт Шевченко 31',
-      uk: 'Україна, Одеса, пр-кт Шевченка 31'
+      en: '31 Shevchenko Avenue, Odessa, Ukraine',
+      ru: 'Украина, Одесса, пр‑кт Шевченко 31',
+      uk: 'Україна, Одеса, пр‑кт Шевченка 31'
     },
     duties: [
       {

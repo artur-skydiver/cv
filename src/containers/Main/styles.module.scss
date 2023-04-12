@@ -18,6 +18,13 @@
   @include mobile-only {
     padding: $padding-mobile;
   }
+
+  @include print {
+    margin-right: 0;
+    padding: 0;
+    padding-top: 1rem;
+    padding-right: $padding-print;
+  }
 }
 
 .header {
@@ -29,13 +36,18 @@
   .name {
     margin-right: 2rem;
     flex-grow: 1;
+    max-width: 0;
+
+    @include desktop {
+      max-width: none;
+    }
+
+    @include print {
+      max-width: none;
+    }
   }
 
   @include tablet-landscape {
-    .name {
-      max-width: 0;
-    }
-
     .options {
       position: absolute;
       top: $padding-landscape;

@@ -1,5 +1,11 @@
-.root {
+@import 'src/styles/media';
 
+.root {
+  @include print {
+    page-break-inside: avoid;
+    page-break-before: auto;
+    page-break-after: auto;
+  }
 }
 
 .progress {

@@ -6,6 +6,11 @@
     display: flex;
     flex-direction: column-reverse;
   }
+
+  @include print {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .github {
@@ -29,5 +34,9 @@
 
   @include hover {
     opacity: 1;
+  }
+  @include print {
+    left: 0;
+    top: 0;
   }
 }

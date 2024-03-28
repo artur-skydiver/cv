@@ -19,7 +19,7 @@ export default ({
   icon,
   iconSet,
   className,
-  onClick
+  onClick,
 }: Props): JSX.Element => {
   return (
     <button type="button" className={cx(s.root, className)} onClick={onClick}>

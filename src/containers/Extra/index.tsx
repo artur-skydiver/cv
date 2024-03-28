@@ -1,4 +1,5 @@
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback, useRef, useState } from 'react';
+import cn from 'classnames';
 
 import useMedia from 'utils/media';
 
@@ -38,11 +39,10 @@ export default () => {
   const needScrollEffect = isDesktop || isLandscape;
 
   const prevScrollTopRef = useRef<number>(0);
-  const scrollBarWidthRef = useRef<number>(0);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  const onScroll = useCallback(({ currentTarget }) => {
-    const { scrollY } = currentTarget;
+  const onScroll = useCallback(({ currentTarget }: Event) => {
+    const { scrollY } = currentTarget as Window;
     const delta = scrollY - prevScrollTopRef.current;
     const root = contentRef.current as HTMLDivElement;
     const content = root.childNodes[0] as HTMLDivElement;
@@ -61,26 +61,24 @@ export default () => {
   }, []);
 
   useEffect(() => {
-    scrollBarWidthRef.current = window.innerWidth - document.body.offsetWidth;
-    if (!needScrollEffect) {
-      const root = contentRef.current as HTMLDivElement;
-      const content = root.childNodes[0] as HTMLDivElement;
-      content.style.marginTop = '0';
-      return;
-    }
     window.addEventListener('scroll', onScroll);
-    // eslint-disable-next-line consistent-return
     return () => window.removeEventListener('scroll', onScroll);
   }, [needScrollEffect]);
 
+  const [showGallery, setShowGallery] = useState(false);
   const onGalleryToggle = useCallback((show: boolean) => {
-    (contentRef.current as HTMLDivElement).style.paddingRight = `${
-      show ? scrollBarWidthRef.current : 0
-    }px`;
+    document.documentElement.style.setProperty(
+      '--scroll-bar',
+      window.innerWidth - document.body.offsetWidth + 'px'
+    );
+    setShowGallery(show);
   }, []);
 
   return (
-    <div className={s.root} ref={contentRef}>
+    <div
+      className={cn(s.root, { [s.nonscrolling]: showGallery })}
+      ref={contentRef}
+    >
       <div className={s.content}>
         <Header />
         <Photos

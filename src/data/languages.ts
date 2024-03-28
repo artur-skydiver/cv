@@ -12,20 +12,20 @@ const languages: Language[] = [
     level: {
       en: 'Upper-Intermediate',
       ru: 'Выше среднего',
-      uk: 'Вище середнього'
+      uk: 'Вище середнього',
     },
-    percent: 60
+    percent: 60,
   },
   {
     name: { en: 'Russian', ru: 'Русский', uk: 'Російська' },
     level: { en: 'Native speaker', ru: 'Носитель языка', uk: 'Рідна мова' },
-    percent: 100
+    percent: 100,
   },
   {
     name: { en: 'Ukrainian', ru: 'Украинский', uk: 'Українська' },
     level: { en: 'Fluent', ru: 'Свободно', uk: 'Вільно' },
-    percent: 85
-  }
+    percent: 85,
+  },
 ];
 
 export default languages;

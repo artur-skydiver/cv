@@ -7,7 +7,6 @@
   },
 
   "sections": {
-
     "personal": {
       "title": "Personal profile"
     },
@@ -42,6 +41,5 @@
     "references": {
       "title": "References"
     }
-
   }
 }

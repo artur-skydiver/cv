@@ -41,7 +41,7 @@ const useMedia = (): ResultType => {
     isMobile: result === 'mobile',
     isPortrait: result === 'portrait',
     isLandscape: result === 'landscape',
-    isDesktop: result === 'desktop'
+    isDesktop: result === 'desktop',
   };
 };
 

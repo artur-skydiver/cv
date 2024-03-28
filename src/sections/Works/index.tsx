@@ -24,7 +24,7 @@ export default () => {
             address,
             duties,
             tools,
-            description
+            description,
           },
           index
         ) => {

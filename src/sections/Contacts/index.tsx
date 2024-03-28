@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import { Locales } from 'localization';
 import { getLinkFromEmail, getLinkFromPhone } from 'utils/maps';
@@ -21,7 +21,12 @@ type RowProps = {
   };
 };
 
-const Row: React.FC<RowProps> = ({ icon, text, link, children }) => (
+const Row: React.FC<PropsWithChildren<RowProps>> = ({
+  icon,
+  text,
+  link,
+  children,
+}) => (
   <li className={s.row}>
     <Icon icon={icon} set="solid" className={s.icon} />
     <div>

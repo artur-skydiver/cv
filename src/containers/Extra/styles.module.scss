@@ -1,6 +1,11 @@
 @import 'src/styles/variables';
 @import 'src/styles/media';
 
+body:has(div.nonscrolling) {
+  padding-right: var(--scroll-bar);
+  overflow: hidden;
+}
+
 .root {
   position: fixed;
   right: 0;
@@ -10,6 +15,10 @@
   box-sizing: content-box;
   background-color: var(--light);
   transition: background-color var(--theme-change-transition);
+
+  &.nonscrolling {
+    padding-right: var(--scroll-bar);
+  }
 
   @include tablet-landscape {
     width: $extra-width-landscape;

@@ -17,7 +17,7 @@ import s from './styles.module.scss';
 const cv: Record<string, string> = {
   en: enCV,
   ru: ruCV,
-  uk: ukCV
+  uk: ukCV,
 };
 
 type Props = {
@@ -27,7 +27,10 @@ type Props = {
 export default ({ className }: Props): JSX.Element => {
   const { t, language } = useLocales('tools');
   const { isDesktop, isLandscape } = useMedia();
-  const handlerDownload = useCallback(() => window.open(cv[language]), [language]);
+  const handlerDownload = useCallback(
+    () => window.open(cv[language]),
+    [language]
+  );
   return (
     <div className={cn(s.root, className)}>
       <div className={s.buttons}>

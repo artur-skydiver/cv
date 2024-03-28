@@ -23,7 +23,7 @@ export default ({
   align = 'left',
   className,
   contentClassName,
-  children
+  children,
 }: Props): JSX.Element => (
   <div className={cn(s.root, className)}>
     <div className={cn(s.header, s[align])}>

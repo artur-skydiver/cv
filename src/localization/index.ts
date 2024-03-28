@@ -17,7 +17,7 @@ export interface Locales<T = string> extends Partial<Record<Lang, T>> {
 export const alphaCodes: Record<Lang, string> = {
   en: 'gb',
   ru: 'ru',
-  uk: 'ua'
+  uk: 'ua',
 };
 
 const setLangAttribute = (language: Lang) =>
@@ -38,13 +38,13 @@ const initLang = langs.includes(savedLanguage)
 const resources: Record<Lang, { translation: ResourceLanguage }> = {
   en: { translation: require('./texts/en.json') },
   ru: { translation: require('./texts/ru.json') },
-  uk: { translation: require('./texts/uk.json') }
+  uk: { translation: require('./texts/uk.json') },
 };
 
 i18next.use(initReactI18next).init({
   interpolation: { escapeValue: false },
   lng: initLang,
-  resources
+  resources,
 });
 
 i18next.on('languageChanged', (language: Lang) => {

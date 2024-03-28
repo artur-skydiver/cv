@@ -1,5 +1,6 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import Carousel, { Modal, ModalGateway, ViewType } from 'react-images';
+import React, { useCallback, useState } from 'react';
+import PhotoSwipe from 'photoswipe';
+import 'photoswipe/style.css';
 import cn from 'classnames';
 
 import avatar from 'assets/photos/avatar.jpeg';
@@ -8,11 +9,9 @@ import skydive from 'assets/photos/skydive.jpg';
 
 import s from './styles.module.scss';
 
-const images: ViewType[] = [
-  { source: avatar },
-  { source: airport },
-  { source: skydive }
-];
+const PHOTOS: string[] = [avatar, airport, skydive];
+const PHOTO_WIDTH = 775;
+const PHOTO_HEIGHT = 1000;
 
 type Props = {
   onGalleryToggle?: (show: boolean) => void;
@@ -20,36 +19,35 @@ type Props = {
 };
 
 export default ({ onGalleryToggle, className }: Props) => {
-  const [showGallery, setShowGallery] = useState(false);
+  const [avatarActive, setAvatarActive] = useState(false);
 
-  const onOpenGallery = useCallback(() => setShowGallery(true), []);
-  const onCloseGallery = useCallback(() => setShowGallery(false), []);
+  const updateGallery = (show: boolean) => {
+    setAvatarActive(show);
+    onGalleryToggle?.(show);
+  };
 
-  useEffect(() => {
-    // eslint-disable-next-line no-unused-expressions
-    onGalleryToggle && onGalleryToggle(showGallery);
-  }, [showGallery]);
+  const onAvatarClick = useCallback(() => {
+    const photoSwipe = new PhotoSwipe({
+      mainClass: s.gallery,
+      dataSource: PHOTOS.map(src => ({
+        src,
+        width: PHOTO_WIDTH,
+        height: PHOTO_HEIGHT,
+      })),
+      zoom: false,
+    });
+    photoSwipe.on('init', () => updateGallery(true));
+    photoSwipe.on('close', () => updateGallery(false));
+    photoSwipe.init();
+  }, []);
 
   return (
     <div className={className}>
-      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions, jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */}
       <div
-        className={cn(s.avatar, { [s.avatarActive]: showGallery })}
+        className={cn(s.avatar, { [s.avatarActive]: avatarActive })}
         style={{ backgroundImage: `url(${avatar})` }}
-        onClick={onOpenGallery}
+        onClick={onAvatarClick}
       />
-      <ModalGateway>
-        {showGallery && (
-          <Modal
-            allowFullscreen={false}
-            closeOnBackdropClick
-            closeOnEsc
-            onClose={onCloseGallery}
-          >
-            <Carousel views={images} />
-          </Modal>
-        )}
-      </ModalGateway>
     </div>
   );
 };

@@ -3,6 +3,7 @@
 [https://artur-skydiver.github.io/cv/](https://artur-skydiver.github.io/cv/)
 
 ### `npm i`
+
 ### `npm start`
 
 Runs the app in the development mode.\

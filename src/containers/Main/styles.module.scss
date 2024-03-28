@@ -51,7 +51,7 @@
     .options {
       position: absolute;
       top: $padding-landscape;
-      right: calc( #{$extra-width-landscape} + #{$padding-landscape} );
+      right: calc(#{$extra-width-landscape} + #{$padding-landscape});
     }
   }
 }

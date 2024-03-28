@@ -3,7 +3,7 @@ import React, {
   useCallback,
   useEffect,
   useRef,
-  useState
+  useState,
 } from 'react';
 import cn from 'classnames';
 
@@ -39,7 +39,7 @@ export default ({
   node = 'span',
   paragraph,
   className,
-  children
+  children,
 }: Props): JSX.Element => {
   const { l, language } = useLocales();
 
@@ -60,7 +60,7 @@ export default ({
     const size = rootNode.getBoundingClientRect();
     setRootSize({
       width: size.width,
-      height: size.height
+      height: size.height,
     });
     setNextContent(children || l(text));
   }, [language, text, children]);
@@ -85,7 +85,7 @@ export default ({
     if (rootSize.width !== newWidth || rootSize.height !== newHeight) {
       setRootSize({
         width: newWidth,
-        height: newHeight
+        height: newHeight,
       });
       setContentSize(rootSize);
     }
@@ -98,13 +98,13 @@ export default ({
       style={content !== nextContent ? rootSize : undefined}
       className={cn(
         s.root,
-        { [s.row]: row, [s.right]: right, [s.conversion]: !!conversion },
+        { [s.row]: row, [s.right]: right, [s.conversion]: conversion },
         className
       )}
       onAnimationEnd={onTransitionEnd}
     >
       <span style={conversion ? contentSize : undefined}>{content}</span>
-      {!!conversion && <span>{nextContent}</span>}
+      {conversion && <span>{nextContent}</span>}
     </Root>
   );
 };

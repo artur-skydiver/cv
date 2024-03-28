@@ -42,7 +42,13 @@
     }
   }
 
-  &.left > * { width: 100% }
-  &.center { justify-content: center; }
-  &.right { justify-content: flex-end; }
+  &.left > * {
+    width: 100%;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.right {
+    justify-content: flex-end;
+  }
 }

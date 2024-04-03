@@ -74,6 +74,10 @@ a {
   }
 }
 
+html[data-theme-switching] a {
+  transition: color var(--theme-change-transition);
+}
+
 p {
   text-indent: 2rem;
   line-height: 1.6rem;

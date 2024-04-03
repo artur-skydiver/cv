@@ -14,6 +14,66 @@ interface Place {
 const works: Place[] = [
   {
     title: 'FrontEnd developer',
+    company: 'SoftServe',
+    dates: {
+      en: 'Oct. 2023 – Mar. 2024',
+      ru: 'Окт. 2023 – Мар. 2024',
+      uk: 'Жов. 2023 – Бер. 2024',
+    },
+    address: { en: 'Remote', ru: 'Удаленно', uk: 'Дистанційно' },
+    duties: [
+      {
+        en: 'Development of mobile applications',
+        ru: 'Разработка мобильных приложений',
+        uk: 'Розробка мобільних додатків',
+      },
+    ],
+    tools: ['TypeScript', 'React Native'],
+    description: {
+      en: 'I was part of a multinational team that consists of over 500 people in which I contributed to the development of a mobile application for one of the largest financial institutions in Saudi Arabia. Since I was part of the central development squad, I managed to implement several key features of the application. I was also involved in bug fixing, refactoring and code review.',
+      ru: 'Я был частью многонациональной команды из более, чем 500 человек, в которой я участвовал в разработке мобильного приложения для одной из крупнейших финансовых организаций Саудовской Аравии. Так как я был частью центрального подразделения разработчиков, мне удалось внедрить несколько ключевых функций приложения. Так же занимался устренением багов, рефакторингом и ревью кода.',
+      uk: 'Я був частиною багатонаціональної команди з більш ніж 500 чоловік, у якій я брав участь у розробці мобільного додатку для однієї з найбільших фінансових організацій Саудівської Аравії. Так як я був частиною центрального підрозділу розробників, мені вдалося впровадити кілька ключових функцій додатку. Також займався усуненням багів, рефакторингом і ревью коду.',
+    },
+  },
+  {
+    title: 'Full-stack developer',
+    partTime: true,
+    company: 'Processica',
+    dates: {
+      en: 'Jan. 2023 – Mar. 2024',
+      ru: 'Янв. 2023 – Мар. 2024',
+      uk: 'Січ. 2023 – Бер. 2024',
+    },
+    address: { en: 'Remote', ru: 'Удаленно', uk: 'Дистанційно' },
+    duties: [
+      {
+        en: 'Development of WEB-services',
+        ru: 'Разработка WEB-сервисов',
+        uk: 'Розробка WEB-сервісів',
+      },
+      {
+        en: 'Development of BackEnd’s API',
+        ru: 'Разработка BackEnd API',
+        uk: 'Розробка BackEnd API',
+      },
+    ],
+    tools: [
+      'TypeScript',
+      'React',
+      'NextJS',
+      'Strapi',
+      'PostgreSQL',
+      'PHP',
+      'WordPress',
+    ],
+    description: {
+      en: 'One of my tasks was to create a FrontEnd client for the real-time chat with an AI bot, and develop an admin panel to manage it. Additionally I developed and supported websites using NextJS and WordPress.',
+      ru: 'Одна из моих задач заключалась в создании FrontEnd клиента для чата реального времени с AI ботом, и разработки панели администратора для управления им. Дополнительно занимался разработкой и поддержкой сайтов на NextJS и WordPress.',
+      uk: 'Одно з моїх завдань полягало у створенні FrontEnd клієнта для чату реального часу з AI ботом, та розробки панелі адміністратора для управління ним. Додатково займався розробкою та підтримкою сайтів на NextJS та WordPress.',
+    },
+  },
+  {
+    title: 'FrontEnd developer',
     partTime: true,
     company: 'Provectus',
     dates: {

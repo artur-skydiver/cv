@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { TransitionEventHandler, useCallback, useState } from 'react';
 import cx from 'classnames';
 
 import s from './styles.module.scss';
@@ -32,7 +32,16 @@ export default ({ className }: Props): JSX.Element => {
     setTheme(newTheme);
     localStorage.setItem(THEME, newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
+    document.documentElement.setAttribute('data-theme-switching', '');
   }, [theme]);
+
+  const onTransitionEnd = useCallback<TransitionEventHandler<HTMLDivElement>>(
+    ({ propertyName }) => {
+      propertyName === 'left' &&
+        document.documentElement.removeAttribute('data-theme-switching');
+    },
+    []
+  );
 
   return (
     <label className={cx(s.root, className)}>
@@ -42,7 +51,7 @@ export default ({ className }: Props): JSX.Element => {
         onClick={toggleTheme}
         onChange={() => null}
       />
-      <div className={s.toggle}>
+      <div className={s.toggle} onTransitionEnd={onTransitionEnd}>
         <svg
           width="12"
           height="12"

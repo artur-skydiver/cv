@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/cv/static/css/main.57953d7f.css",
-    "main.js": "/cv/static/js/main.45782904.js",
-    "static/media/Artur.Blieshcheiev.CV.uk.pdf": "/cv/static/media/Artur.Blieshcheiev.CV.uk.13a019b2494e123b6048.pdf",
-    "static/media/Artur.Blieshcheiev.CV.ru.pdf": "/cv/static/media/Artur.Blieshcheiev.CV.ru.83e257fe3853a2ed8845.pdf",
-    "static/media/Artur.Blieshcheiev.CV.en.pdf": "/cv/static/media/Artur.Blieshcheiev.CV.en.7bbc26517df772764968.pdf",
+    "main.css": "/cv/static/css/main.5cefbb73.css",
+    "main.js": "/cv/static/js/main.29c75e4e.js",
+    "static/media/Artur.Blieshcheiev.CV.en.pdf": "/cv/static/media/Artur.Blieshcheiev.CV.en.53600c8b29e88dd3ee1f.pdf",
+    "static/media/Artur.Blieshcheiev.CV.ru.pdf": "/cv/static/media/Artur.Blieshcheiev.CV.ru.e40e9786fce1f6c6cb9e.pdf",
+    "static/media/Artur.Blieshcheiev.CV.uk.pdf": "/cv/static/media/Artur.Blieshcheiev.CV.uk.9c8d848f625c067652fd.pdf",
     "static/media/rs.svg": "/cv/static/media/rs.b16c22033ad1a395b009.svg",
     "static/media/sh-ac.svg": "/cv/static/media/sh-ac.2f733db97b52ef32314b.svg",
     "static/media/bo.svg": "/cv/static/media/bo.2df6927ff85d4a69996b.svg",
@@ -279,11 +279,11 @@
     "static/media/bd.svg": "/cv/static/media/bd.0ad8c443ef4d47ea0497.svg",
     "static/media/pe.svg": "/cv/static/media/pe.d64e9732fcaa8f765994.svg",
     "static/media/id.svg": "/cv/static/media/id.f624e2c8444a7794b357.svg",
-    "main.57953d7f.css.map": "/cv/static/css/main.57953d7f.css.map",
-    "main.45782904.js.map": "/cv/static/js/main.45782904.js.map"
+    "main.5cefbb73.css.map": "/cv/static/css/main.5cefbb73.css.map",
+    "main.29c75e4e.js.map": "/cv/static/js/main.29c75e4e.js.map"
   },
   "entrypoints": [
-    "static/css/main.57953d7f.css",
-    "static/js/main.45782904.js"
+    "static/css/main.5cefbb73.css",
+    "static/js/main.29c75e4e.js"
   ]
 }

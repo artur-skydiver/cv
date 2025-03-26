@@ -23,15 +23,20 @@ const skills: Skill[] = [
   {
     name: 'JavaScript, TypeScript',
     experience: EXPERIENCES.EXPERT,
-    percent: 90,
+    percent: 100,
   },
   {
-    name: 'ReactJS, Redux, MobX',
+    name: 'ReactJS (Redux, MobX) / NextJS',
     experience: EXPERIENCES.EXPERT,
-    percent: 90,
+    percent: 100,
   },
   {
     name: 'React Native',
+    experience: EXPERIENCES.EXPERT,
+    percent: 100,
+  },
+  {
+    name: 'NodeJS (Express, NestJS)',
     experience: EXPERIENCES.EXPERT,
     percent: 90,
   },
@@ -39,6 +44,11 @@ const skills: Skill[] = [
     name: 'PHP (Laravel)',
     experience: EXPERIENCES.EXPERT,
     percent: 90,
+  },
+  {
+    name: 'Python (FastAPI)',
+    experience: EXPERIENCES.EXPERIENCED,
+    percent: 70,
   },
   {
     name: 'Databases',

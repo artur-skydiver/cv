@@ -14,6 +14,29 @@ interface Place {
 const works: Place[] = [
   {
     title: 'FrontEnd developer',
+    company: 'BTC-Alpha',
+    dates: {
+      en: 'Aug. 2024 – Feb. 2025',
+      ru: 'Авг. 2024 – Фев. 2025',
+      uk: 'Сер. 2024 – Лют. 2025',
+    },
+    address: { en: 'Remote', ru: 'Удаленно', uk: 'Дистанційно' },
+    duties: [
+      {
+        en: "Work on the company's websites and services",
+        ru: 'Работа над сайтами и сервисами компании',
+        uk: 'Робота над сайтами та сервісами компанії',
+      },
+    ],
+    tools: ['TypeScript', 'React', 'NextJS'],
+    description: {
+      en: "I was part of a small team of FrontEnd developers and worked on redesigns, bug fixes and new features for the company's products.",
+      ru: 'Я был частью небольшой команды FrontEnd разработчиков и работал над редизайном, исправлением ошибок и новыми функциями для продуктов компании',
+      uk: 'Я був частиною невеликої команди FrontEnd розробників та працював над редизайном, виправленням помилок та новими функціями для продуктів компанії.',
+    },
+  },
+  {
+    title: 'FrontEnd developer',
     company: 'SoftServe',
     dates: {
       en: 'Oct. 2023 – Mar. 2024',
@@ -40,9 +63,9 @@ const works: Place[] = [
     partTime: true,
     company: 'Processica',
     dates: {
-      en: 'Jan. 2023 – Mar. 2024',
-      ru: 'Янв. 2023 – Мар. 2024',
-      uk: 'Січ. 2023 – Бер. 2024',
+      en: 'Jan. 2023 – Sep. 2024',
+      ru: 'Янв. 2023 – Сен. 2024',
+      uk: 'Січ. 2023 – Вер. 2024',
     },
     address: { en: 'Remote', ru: 'Удаленно', uk: 'Дистанційно' },
     duties: [
@@ -52,24 +75,36 @@ const works: Place[] = [
         uk: 'Розробка WEB-сервісів',
       },
       {
+        en: 'Development of mobile applications',
+        ru: 'Разработка мобильных приложений',
+        uk: 'Розробка мобільних додатків',
+      },
+      {
         en: 'Development of BackEnd’s API',
         ru: 'Разработка BackEnd API',
         uk: 'Розробка BackEnd API',
+      },
+      {
+        en: 'Support for company websites',
+        ru: 'Поддержка веб-сайтов компании',
+        uk: 'Підтримка веб-сайтів компанії',
       },
     ],
     tools: [
       'TypeScript',
       'React',
+      'React Native',
       'NextJS',
       'Strapi',
+      'Python',
       'PostgreSQL',
       'PHP',
       'WordPress',
     ],
     description: {
-      en: 'One of my tasks was to create a FrontEnd client for the real-time chat with an AI bot, and develop an admin panel to manage it. Additionally I developed and supported websites using NextJS and WordPress.',
-      ru: 'Одна из моих задач заключалась в создании FrontEnd клиента для чата реального времени с AI ботом, и разработки панели администратора для управления им. Дополнительно занимался разработкой и поддержкой сайтов на NextJS и WordPress.',
-      uk: 'Одно з моїх завдань полягало у створенні FrontEnd клієнта для чату реального часу з AI ботом, та розробки панелі адміністратора для управління ним. Додатково займався розробкою та підтримкою сайтів на NextJS та WordPress.',
+      en: 'One of my tasks was to create a web and mobile client for real-time chat with an AI bot, and develop an admin panel to manage it. I also rewrote the BackEnd from scratch in Python using FastAPI for this chat. Additionally I developed and supported websites using NextJS and WordPress.',
+      ru: 'Одна из моих задач заключалась в создании Web и мобильного клиента для чата реального времени с AI ботом, и разработки панели администратора для управления им. Так же переписал с нуля BackEnd на Python с использованием FastAPI для этого чата. Дополнительно занимался разработкой и поддержкой сайтов на NextJS и WordPress.',
+      uk: 'Одна з моїх завдань полягала у створенні Web та мобільного клієнта для чату реального часу з AI ботом, та розробки панелі адміністратора для управління ним. Також переписав з нуля BackEnd на Python з використанням FastAPI для цього чату. Додатково займався розробкою та підтримкою сайтів на NextJS та WordPress.',
     },
   },
   {

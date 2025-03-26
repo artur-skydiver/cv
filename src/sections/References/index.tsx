@@ -2,10 +2,14 @@ import React from 'react';
 import cn from 'classnames';
 
 import { useLocales } from 'localization';
-import { getLinkFromEmail, getLinkFromPhone } from 'utils/maps';
+import {
+  getLinkFromEmail,
+  getLinkFromPhone,
+  getLinkFromTelegram,
+} from 'utils/maps';
 
 import Section from 'components/Section';
-import Icon, { IconProp } from 'components/Icon';
+import Icon, { IconProp, IconSet } from 'components/Icon';
 import Transition from 'components/Transition';
 
 import references from 'data/references';
@@ -14,6 +18,7 @@ import s from './styles.module.scss';
 
 type RowProps = {
   icon: IconProp;
+  set?: IconSet;
   text?: string;
   link?: {
     href: string;
@@ -21,9 +26,9 @@ type RowProps = {
   };
 };
 
-const Row: React.FC<RowProps> = ({ icon, text, link }) => (
+const Row: React.FC<RowProps> = ({ icon, set = 'solid', text, link }) => (
   <li className={cn('row', s.row)}>
-    <Icon icon={icon} set="solid" className={s.rowIcon} />
+    <Icon icon={icon} set={set} className={s.rowIcon} />
     <div className="grow1">
       {link ? (
         <a href={link.href} target="_blank" rel="noreferrer">
@@ -50,23 +55,39 @@ export default ({ className }: Props) => {
       className={cn(s.root, className)}
       contentClassName={s.content}
     >
-      {references.map(({ name, position, company, phone, email }, index) => (
-        <div key={`reference-${index.toString()}`} className={s.reference}>
-          <Transition text={l(name)} className={s.name} />
-          <ul>
-            <Row icon="briefcase" text={l(position)} />
-            <Row icon="building" text={l(company)} />
-            <Row
-              icon="phone"
-              link={{ text: phone, href: getLinkFromPhone(phone) }}
-            />
-            <Row
-              icon="envelope"
-              link={{ text: email, href: getLinkFromEmail(email) }}
-            />
-          </ul>
-        </div>
-      ))}
+      {references.map(
+        ({ name, position, company, phone, email, telegram }, index) => (
+          <div key={`reference-${index.toString()}`} className={s.reference}>
+            <Transition text={l(name)} className={s.name} />
+            <ul>
+              <Row icon="briefcase" text={l(position)} />
+              <Row icon="building" text={l(company)} />
+              {!!phone && (
+                <Row
+                  icon="phone"
+                  link={{ text: phone, href: getLinkFromPhone(phone) }}
+                />
+              )}
+              {!!email && (
+                <Row
+                  icon="envelope"
+                  link={{ text: email, href: getLinkFromEmail(email) }}
+                />
+              )}
+              {!!telegram && (
+                <Row
+                  icon="telegram"
+                  set="brands"
+                  link={{
+                    text: `@${telegram}`,
+                    href: getLinkFromTelegram(telegram),
+                  }}
+                />
+              )}
+            </ul>
+          </div>
+        )
+      )}
     </Section>
   );
 };

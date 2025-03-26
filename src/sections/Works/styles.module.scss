@@ -22,7 +22,7 @@
 
   @include print {
     page-break-inside: avoid;
-    page-break-after: auto;
+    page-break-after: avoid;
   }
 }
 
@@ -61,6 +61,12 @@
     grid-template-columns: auto;
   }
 
+  @include print {
+    page-break-inside: avoid;
+    page-break-before: avoid;
+    page-break-after: avoid;
+  }
+
   .listTitle {
     font-weight: 600;
     color: var(--dark);
@@ -75,6 +81,7 @@
 .duties {
   @include print {
     page-break-inside: avoid;
+    page-break-after: avoid;
   }
 }
 
@@ -88,6 +95,7 @@
 
   @include print {
     page-break-inside: avoid;
+    page-break-after: avoid;
   }
 
   li {

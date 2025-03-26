@@ -4,11 +4,31 @@ interface Reference {
   name: Locales;
   position: Locales;
   company: Locales | string;
-  phone: string;
-  email: string;
+  phone?: string;
+  email?: string;
+  telegram?: string;
 }
 
 const references: Reference[] = [
+  {
+    name: {
+      en: 'Oleg Piskun',
+      ru: 'Олег Пискун',
+      uk: 'Олег Піскун',
+    },
+    position: {
+      en: 'General Manager',
+      ru: 'Главный управляющий',
+      uk: 'Головний менеджер',
+    },
+    company: {
+      en: 'Appsider',
+      ru: 'Appsider',
+      uk: 'Appsider',
+    },
+    phone: '+38 067 328-57-59',
+    telegram: 'Oleg_Piskun',
+  },
   {
     name: {
       en: 'Marina Sopinskaya',
